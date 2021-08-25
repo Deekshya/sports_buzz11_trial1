@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sports_buzz11_trial1/target_screen.dart';
-import 'home_content.dart';
-import 'package:sports_buzz11_trial1/PostContent.dart';
-import 'package:sports_buzz11_trial1/NewsContent.dart';
-import 'package:sports_buzz11_trial1/main_screen_drawer.dart';
-import 'trial_bottom_bar_screen.dart';
+import 'package:sports_buzz11_trial1/screens/target_screen.dart';
+import 'screens/homeScreen.dart';
+import 'package:sports_buzz11_trial1/content/PostContent.dart';
+import 'package:sports_buzz11_trial1/content/NewsContent.dart';
+import 'package:sports_buzz11_trial1/screens/main_screen_drawer.dart';
+import 'screens/trial_bottom_bar_screen.dart';
 
 import 'constants.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   List<Widget> bottomNavigationContent = [
-    HomeContent(),
+    HomeScreen(),
     //NewsContent(),
     TrialBottomBarScreen(),
     //PostContent()
@@ -29,6 +29,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {'targetScreen': (context) => TargetScreen()},
       title: 'SportsBuzz11',
       theme: ThemeData(
           primaryColor: kPrimaryColor,

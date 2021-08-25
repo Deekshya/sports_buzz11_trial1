@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import '../constants.dart';
+import 'package:sports_buzz11_trial1/screens/target_screen.dart';
 
-class HomeContent extends StatelessWidget {
-  const HomeContent({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,9 @@ class HomeContent extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, "targetScreen");
+                  },
                   child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25)),
