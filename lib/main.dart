@@ -20,10 +20,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   List<Widget> bottomNavigationContent = [
     HomeScreen(),
-    //NewsContent(),
-    TrialBottomBarScreen(),
-    //PostContent()
-    TargetScreen()
+    NewsContent(),
+    //TrialBottomBarScreen(),
+    PostContent()
+    //TargetScreen()
   ];
   int _currentIndex = 0;
   @override

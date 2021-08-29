@@ -41,7 +41,7 @@ class PreviewScreen extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8),
                   child: WeatherAndPitchCard(
-                    label1: 'Wankadhe Stadium',
+                    label1: 'Wankhade Stadium',
                     label2: 'Batting',
                     label3: 'Avg.Sc:23',
                     size: 18,
@@ -56,19 +56,62 @@ class PreviewScreen extends StatelessWidget {
                         child: Card(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      child: Text(kIndia11),
+                      child: Text(kTeam1XI,textAlign: TextAlign.center,),
                       elevation: 6,
                     )),
                     Expanded(
                         child: Card(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      child: Text(kIndia11),
+                      child: Text(kTeam2XI,textAlign: TextAlign.center,),
                       elevation: 6,
                     )),
                   ],
                 ),
-              )
+              ),
+              Text('Key Players', style: kSubHeading),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Text(kTeam1KeyPlayers,textAlign: TextAlign.center,),
+                          elevation: 6,
+                        )),
+                    Expanded(
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Text(kTeam2KeyPlayers,textAlign: TextAlign.center,),
+                          elevation: 6,
+                        )),
+                  ],
+                ),
+              ),
+              Text('Team1 News', style: kSubHeading),
+              Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(kTeamNews,),
+                ),
+                elevation: 6,
+              ),
+              Text('Team2 News', style: kSubHeading),
+              Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(kTeamNews,),
+                ),
+                elevation: 6,
+              ),
             ],
           ),
         )

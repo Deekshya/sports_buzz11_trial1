@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sports_buzz11_trial1/components/ReusableDrawerTabs.dart';
+import 'package:sports_buzz11_trial1/nav_drawer_screens/alert_screen.dart';
 
 class MainScreenDrawer extends StatelessWidget {
   const MainScreenDrawer({Key? key}) : super(key: key);
@@ -35,58 +36,41 @@ class MainScreenDrawer extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      // Padding(
-                      //   padding: const EdgeInsets.symmetric(vertical: 20),
-                      //   child: Row(
-                      //     children: [
-                      //       GestureDetector(
-                      //         child: Image(
-                      //           image: AssetImage('images/insta.png'),
-                      //           width: 100,
-                      //           height: 100,
-                      //         ),
-                      //       ),
-                      //       GestureDetector(
-                      //         child: Image(
-                      //           image: AssetImage('images/twitter.png'),
-                      //           width: 100,
-                      //           height: 100,
-                      //         ),
-                      //       ),
-                      //       GestureDetector(
-                      //         child: Image(
-                      //           image: AssetImage('images/whatsapp.png'),
-                      //           width: 100,
-                      //           height: 100,
-                      //         ),
-                      //       ),
-                      //     ],
-                      //   ),
-                      // ),
+
                     ],
                   ),
                 )),
             Expanded(
                 flex: 1,
                 child: ReusableDrawerTabs(
-                    label: 'About Us', iconName: Icons.info)),
+                    label: 'About Us', iconName: Icons.info,onTap: (){
+                      showDialog(context: context, builder: (context)=>AlertScreen().aboutUsPopUp(context));
+                },)),
             Expanded(
                 flex: 1,
                 child: ReusableDrawerTabs(
                     label: 'Help and Support',
-                    iconName: Icons.contact_support)),
+                    iconName: Icons.contact_support,onTap: (){
+                  showDialog(context: context, builder: (context)=>AlertScreen().helpAndSupportPopUp(context));
+                },)),
             Expanded(
                 flex: 1,
                 child: ReusableDrawerTabs(
-                    label: 'Feedback', iconName: Icons.feedback)),
+                    label: 'Feedback', iconName: Icons.feedback,onTap: (){
+                  showDialog(context: context, builder: (context)=>AlertScreen().feedBackPopUp(context));
+                },)),
             Expanded(
                 flex: 1,
                 child:
-                    ReusableDrawerTabs(label: 'Share', iconName: Icons.share)),
+                    ReusableDrawerTabs(label: 'Share', iconName: Icons.share,onTap: (){
+                      showDialog(context: context, builder: (context)=>AlertScreen().aboutUsPopUp(context));
+                    },)),
             Expanded(
                 flex: 1,
                 child: ReusableDrawerTabs(
-                    label: 'Rate Us', iconName: Icons.star_rate)),
+                    label: 'Rate Us', iconName: Icons.star_rate,onTap: (){
+                  showDialog(context: context, builder: (context)=>AlertScreen().aboutUsPopUp(context));
+                },)),
             Expanded(
               flex: 2,
               child: Container(
